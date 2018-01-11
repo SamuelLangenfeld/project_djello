@@ -7,7 +7,14 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sql:migrate:undo": "npm run sql db:migrate:undo:all",
+    "sql:migrate": "npm run sql db:migrate",
+    "sql:seed:undo": "npm run sql db:seed:undo:all",
+    "sql:seed": "npm run sql db:seed:all",
+    "sql:s":
+      "npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed",
+    "sql": "sequelize"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +34,7 @@
     "passport-local": "^1.0.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.31.0"
+    "sequelize": "^4.31.0",
+    "sequelize-cli": "^3.2.0"
   }
 }
