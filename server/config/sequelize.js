@@ -6,7 +6,8 @@ module.exports = {
     password: process.env.POSTGRES_PASSWORD,
     database: "djello_development",
     host: "127.0.0.1",
-    dialect: "postgres"
+    dialect: "postgres",
+    logging: console.log
   },
   test: {
     username: null,
