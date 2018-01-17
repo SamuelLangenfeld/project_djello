@@ -55,3 +55,17 @@ types of activites to log
 * adding members
 * marking as complete/incomplete
 * editing priority value
+
+
+
+
+
+
+Ok so client side-
+
+Assume user just logged in.
+Fetch request for user info, plus boards. Pretty much want everything at once. Shouldn't actually be that much info, so won't be bad.
+
+Fetch for user, their boards, lists for the boards, cards for the lists.
+
+Let's get board show and creation working.

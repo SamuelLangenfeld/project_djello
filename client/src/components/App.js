@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
+import React, { Component } from "react";
+import logo from "../logo.svg";
+import "../App.css";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
   Navlink
-} from 'react-router-dom';
-import UserListContainer from '../containers/UserListContainer';
+} from "react-router-dom";
+import UserListContainer from "../containers/UserListContainer";
+import UserContainer from "../containers/UserContainer";
+import HomeContainer from "../containers/HomeContainer";
 
 class App extends Component {
   render() {
@@ -20,8 +22,7 @@ class App extends Component {
         </header>
         <Router>
           <div>
-            <div>Hello My shizzle</div>
-            <UserListContainer />
+            <HomeContainer />
           </div>
         </Router>
       </div>

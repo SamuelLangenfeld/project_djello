@@ -4,19 +4,15 @@ module.exports = (sequelize, DataTypes) => {
     "Board",
     {
       name: DataTypes.STRING
-    },
-    {
-      classMethods: {
-        associate: function(models) {
-          // associations can be defined here
-        }
-      }
     }
   );
 
   Board.associate = function(models) {
     Board.belongsTo(models.User, {
       foreignKey: "owner"
+    });
+    Board.hasMany(models.List, {
+      foreignKey: 'board'
     });
   };
   return Board;

@@ -1,26 +1,24 @@
 import { connect } from "react-redux";
 // import serialize from 'form-serialize';
-import { getUsers } from "../actions";
+import { getCurrentUser } from "../actions";
 import React, { Component } from "react";
-import UserList from "../components/UserList";
+import User from "../components/User";
 
 const mapStateToProps = state => {
   return {
-    users: state.usersReducer.users,
+    currentUser: state.usersReducer.currentUser,
     isFetching: state.usersReducer.isFetching
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    getUsers: () => {
-      dispatch(getUsers());
+    getUser: () => {
+      dispatch(getCurrentUser());
     }
   };
 };
 
-const UserListContainer = connect(mapStateToProps, mapDispatchToProps)(
-  UserList
-);
+const UserContainer = connect(mapStateToProps, mapDispatchToProps)(User);
 
-export default UserListContainer;
+export default UserContainer;

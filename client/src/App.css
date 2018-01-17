@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -23,6 +22,31 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.board {
+}
+
+.list {
+  background-color: #d5dbdb;
+  margin-bottom: 20px;
+}
+
+.boardContainer {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.deleteLink {
+  float: right;
 }

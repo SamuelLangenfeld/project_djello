@@ -12,8 +12,7 @@
     "sql:migrate": "npm run sql db:migrate",
     "sql:seed:undo": "npm run sql db:seed:undo:all",
     "sql:seed": "npm run sql db:seed:all",
-    "sql:s":
-      "npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed",
+    "sql:s": "npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed",
     "sql": "sequelize"
   },
   "author": "",
@@ -21,6 +20,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-flash-messages": "^0.1.1",
